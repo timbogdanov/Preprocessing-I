@@ -146,6 +146,11 @@ h2 {
   font-size: 6rem;
   color: #a4a4a4;
 }
+@media (max-width: 500px) {
+  h2 {
+    font-size: 4rem;
+  }
+}
 /* Font variables */
 /* Color variables */
 /* Mixins */
@@ -154,9 +159,20 @@ h2 {
   width: 60%;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  .main-wrapper {
+    width: 80%;
+  }
+}
 /* Navigation styles */
 header {
   margin: 60px 0;
+}
+@media (max-width: 500px) {
+  header nav {
+    display: flex;
+    flex-direction: column;
+  }
 }
 header nav a {
   color: #f9f9f9;
@@ -167,15 +183,29 @@ header nav a {
   display: inline-block;
   transition: all 0.2s ease;
 }
+@media (max-width: 500px) {
+  header nav a {
+    margin: 0;
+    padding: 15px 25px;
+  }
+}
 header nav a:hover {
   border-radius: 2px;
   background: #1f1f1f;
   color: #f9f9f9;
 }
 /* About section styling */
+.about-section {
+  margin-top: 10%;
+}
 .about-section h1 {
   font-size: 8rem;
   font-family: 'Playfair Display', serif;
+}
+@media (max-width: 500px) {
+  .about-section h1 {
+    font-size: 6rem;
+  }
 }
 .about-section a,
 .about-section p {
@@ -183,6 +213,12 @@ header nav a:hover {
   margin: 30px 20px 0 0;
   display: inline-block;
   letter-spacing: 0.3px;
+}
+@media (max-width: 500px) {
+  .about-section a,
+  .about-section p {
+    display: block;
+  }
 }
 .about-section a {
   color: #4169E1;
@@ -230,8 +266,19 @@ header nav a:hover {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .skills-section .skills {
+    flex-direction: column;
+  }
+}
 .skills-section .skills .skill {
   width: 21%;
+}
+@media (max-width: 500px) {
+  .skills-section .skills .skill {
+    width: 100%;
+    margin-bottom: 10%;
+  }
 }
 .skills-section .skills .skill h3 {
   font-size: 1.6rem;
@@ -256,7 +303,12 @@ header nav a:hover {
   flex-direction: column;
 }
 .work-section .job {
-  margin-bottom: 50px;
+  margin-bottom: 5%;
+}
+@media (max-width: 500px) {
+  .work-section .job {
+    margin-bottom: 10%;
+  }
 }
 .work-section .job h3 {
   font-size: 1.6rem;
@@ -273,20 +325,13 @@ header nav a:hover {
   font-size: 1.4rem;
 }
 .work-section .job p.job-desc {
+  margin-top: 30px;
   font-size: 1.6rem;
   line-height: 1.5;
 }
-.work-section .job ul {
-  margin-top: 20px;
-}
-.work-section .job ul li {
-  list-style-type: circle;
-  font-size: 1.4rem;
-  line-height: 2;
-}
 /* Contact section styling */
 .contact-section {
-  margin-top: 15%;
+  margin: 15% 0;
 }
 .contact-section .contact-form {
   margin-top: 50px;
@@ -306,4 +351,5 @@ header nav a:hover {
 }
 .contact-section .contact-form form button {
   color: #a4a4a4;
+  cursor: pointer;
 }

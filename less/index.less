@@ -70,6 +70,10 @@ h2 {
 	font-family: @secondary-font;
 	font-size: 6rem;
 	color: @text-secondary;
+
+	@media (max-width: 500px) {
+		font-size: 4rem;
+	}
 }
 
 /* Font variables */
@@ -104,6 +108,10 @@ h2 {
 .main-wrapper {
 	width: 60%;
 	margin: 0 auto;
+
+	@media (max-width: 500px) {
+		width: 80%;
+	}
 }
 
 /* Navigation styles */
@@ -113,6 +121,11 @@ header {
 
 	nav {
 
+		@media (max-width: 500px) {
+			display: flex;
+			flex-direction: column;
+		}
+
 		a {
 			color: @text;
 			font-size: 1.1rem;
@@ -121,6 +134,11 @@ header {
 			border-radius: 8px;
 			display: inline-block;
 			transition: all .2s ease;
+
+			@media (max-width: 500px) {
+				margin: 0;
+				padding: 15px 25px;
+			}
 
 			&:hover {
 				.dark-card();
@@ -132,9 +150,15 @@ header {
 /* About section styling */
 
 .about-section {
+	margin-top: 10%;
+
 	h1 {
 		font-size: 8rem;
 		font-family: @secondary-font;
+
+		@media (max-width: 500px) {
+			font-size: 6rem;
+		}
 	}
 
 	a, p {
@@ -142,6 +166,10 @@ header {
 		margin: 30px 20px 0 0;
 		display: inline-block;
 		letter-spacing: .3px;
+
+		@media (max-width: 500px) {
+			display: block;
+		}
 	}
 
 	a {
@@ -201,8 +229,17 @@ header {
 		margin-top: 50px;
 		.flex-x-center();
 
+		@media (max-width: 500px) {
+			flex-direction: column;
+		}
+
 		.skill {
 			width: 21%;
+
+			@media (max-width: 500px) {
+				width: 100%;
+				margin-bottom: 10%;
+			}
 
 			h3 {
 				font-size: 1.6rem;
@@ -235,7 +272,11 @@ header {
 	} // end of .jobs
 
 	.job {
-		margin-bottom: 50px;
+		margin-bottom: 5%;
+
+		@media (max-width: 500px) {
+			margin-bottom: 10%;
+		}
 
 		h3 {
 			font-size: 1.6rem;
@@ -255,18 +296,9 @@ header {
 		}
 
 		p.job-desc {
+			margin-top: 30px;
 			font-size: 1.6rem;
 			line-height: 1.5;
-		}
-
-		ul {
-			margin-top: 20px;
-
-			li {
-				list-style-type: circle;
-				font-size: 1.4rem;
-				line-height: 2;
-			}
 		}
 	} // end pf .job
 } // end of .work-section
@@ -275,7 +307,7 @@ header {
 /* Contact section styling */
 
 .contact-section {
-	margin-top: 15%;
+	margin: 15% 0;
 
 	.contact-form {
 		margin-top: 50px;
@@ -298,6 +330,7 @@ header {
 
 			button {
 				color: @text-secondary;
+				cursor: pointer;
 			}
 		}
 	}
