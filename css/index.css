@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -156,7 +156,7 @@ h2 {
 /* Mixins */
 /* main-wrapper styles */
 .main-wrapper {
-  width: 60%;
+  width: 65%;
   margin: 0 auto;
 }
 @media (max-width: 500px) {
@@ -179,7 +179,7 @@ header nav a {
   font-size: 1.1rem;
   margin: 0 5px 0 0;
   padding: 10px 17px;
-  border-radius: 8px;
+  border-radius: 5px;
   display: inline-block;
   transition: all 0.2s ease;
 }
@@ -196,7 +196,7 @@ header nav a:hover {
 }
 /* About section styling */
 .about-section {
-  margin-top: 10%;
+  margin-top: 100px;
 }
 .about-section h1 {
   font-size: 8rem;
@@ -221,7 +221,7 @@ header nav a:hover {
   }
 }
 .about-section a {
-  color: #4169E1;
+  color: #DAA520;
 }
 /* Profile section styling */
 .profile-section {
@@ -241,6 +241,7 @@ header nav a:hover {
   color: #f9f9f9;
   font-family: 'Source Sans Pro', sans-serif;
   z-index: 1;
+  transition: all 0.2s ease;
 }
 .profile-section .hire-me::before {
   content: "";
@@ -251,15 +252,18 @@ header nav a:hover {
   width: 100%;
   height: 20px;
   border-radius: 1px;
-  background: #4169E1;
+  background: #DAA520;
   transition: all 0.1s ease;
 }
 .profile-section .hire-me:hover::before {
   height: 42px;
 }
+.profile-section .hire-me:hover {
+  color: #725711;
+}
 /* Skills section styling */
 .skills-section {
-  margin-top: 15%;
+  margin-top: 100px;
 }
 .skills-section .skills {
   margin-top: 50px;
@@ -295,7 +299,7 @@ header nav a:hover {
 }
 /* Work section styling */
 .work-section {
-  margin-top: 15%;
+  margin-top: 100px;
 }
 .work-section .jobs {
   margin-top: 50px;
@@ -331,7 +335,7 @@ header nav a:hover {
 }
 /* Contact section styling */
 .contact-section {
-  margin: 15% 0;
+  margin: 100px 0;
 }
 .contact-section .contact-form {
   margin-top: 50px;
@@ -348,6 +352,7 @@ header nav a:hover {
   background: #1f1f1f;
   border: none;
   font-size: 1rem;
+  border-radius: 5px;
 }
 .contact-section .contact-form form button {
   color: #a4a4a4;

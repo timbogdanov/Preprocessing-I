@@ -1,5 +1,5 @@
 // Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -25,7 +25,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -83,12 +83,11 @@ h2 {
 
 /* Color variables */
 
-@primary-accent: #4169E1;
+@primary-accent: #DAA520;
 @text: #f9f9f9;
 @text-secondary: #a4a4a4;
 @primary-dark: #1a1a1a;
 @secondary-dark: #1f1f1f;
-
 
 /* Mixins */
 
@@ -103,16 +102,20 @@ h2 {
 	justify-content: space-between;
 }
 
+
+
 /* main-wrapper styles */
 
 .main-wrapper {
-	width: 60%;
+	width: 65%;
 	margin: 0 auto;
 
 	@media (max-width: 500px) {
 		width: 80%;
 	}
 }
+
+
 
 /* Navigation styles */
 
@@ -131,7 +134,7 @@ header {
 			font-size: 1.1rem;
 			margin: 0 5px 0 0;
 			padding: 10px 17px;
-			border-radius: 8px;
+			border-radius: 5px;
 			display: inline-block;
 			transition: all .2s ease;
 
@@ -147,10 +150,12 @@ header {
 	} // end of nav
 } // end of header
 
+
+
 /* About section styling */
 
 .about-section {
-	margin-top: 10%;
+	margin-top: 100px;
 
 	h1 {
 		font-size: 8rem;
@@ -199,6 +204,7 @@ header {
 		color: @text;
 		font-family: @primary-font;
 		z-index: 1;
+		transition: all .2s ease;
 
 
 		&::before {
@@ -217,13 +223,19 @@ header {
 		&:hover::before {
 			height: 42px;
 		}
+
+		&:hover {
+			color: #725711;
+		}
 	} // end of .hire-me
 } // end of .profile-section
+
+
 
 /* Skills section styling */
 
 .skills-section {
-	margin-top: 15%;
+	margin-top: 100px;
 
 	.skills {
 		margin-top: 50px;
@@ -260,10 +272,11 @@ header {
 } // end of .skills-section
 
 
+
 /* Work section styling */
 
 .work-section {
-	margin-top: 15%;
+	margin-top: 100px;
 
 	.jobs {
 		margin-top: 50px;
@@ -304,10 +317,11 @@ header {
 } // end of .work-section
 
 
+
 /* Contact section styling */
 
 .contact-section {
-	margin: 15% 0;
+	margin: 100px 0;
 
 	.contact-form {
 		margin-top: 50px;
@@ -326,6 +340,7 @@ header {
 				background: @secondary-dark;
 				border: none;
 				font-size: 1rem;
+				border-radius: 5px;
 			}
 
 			button {
