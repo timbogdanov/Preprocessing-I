@@ -21,20 +21,20 @@
 
     <header>
       <nav>
-        <a href="#">Profile</a>
-        <a href="#">Experiences</a>
-        <a href="#">Achievements</a>
-        <a href="#">Skills</a>
+        <a href="#professional-summary">Professional Summary</a>
+        <a href="#skills">Skills</a>
+        <a href="#work-history">Work History</a>
+        <a href="#contact">Hire Me</a>
       </nav>
-    </header> <!-- .main-wrapper close -->
+    </header> <!-- end of .main-wrapper -->
 
-    <section class="profile-section">
+    <section id="professional-summary" class="profile-section">
       <h2>Professional <br> Summary</h2>
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque architecto excepturi est omnis ratione delectus facilis, ducimus, eum eius, repellat neque rem voluptate nulla. Vel amet dolorem quam facere provident nulla, repudiandae dolorum ex quasi voluptate alias sed ut recusandae repellendus possimus iure dignissimos, qui fuga ratione? Atque laborum voluptatibus hic dolores quas laudantium, incidunt dolore fugiat consequatur aspernatur repellendus iusto id veritatis ducimus, inventore deserunt ut a, nam magnam quo fugit! Repudiandae quos similique fugiat provident delectus incidunt expedita.</p>
       <a class="hire-me" href="#">Available for hire</a>
-    </section>
+    </section> <!-- end of .profile-section -->
 
-    <section class="skills-section">
+    <section id="skills" class="skills-section">
       <h2>Skills</h2>
       <div class="skills">
 
@@ -58,7 +58,56 @@
           <p>Fluent English, Native Russian</p>
         </div>
       </div>
-    </section>
+    </section> <!-- end of .skills-section -->
+
+    <section id="work-history" class="work-section">
+      <h2>Work History</h2>
+
+      <div class="jobs">
+        <div class="job">
+          <h3>Apple Inc.</h3>
+          <p class="job-date">Apr 2018 - Present</p>
+          <p class="job-position">Lead Developer</p>
+          <p class="job-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere aliquam nobis quam voluptatem doloribus ab, odio nemo ad pariatur consectetur veniam. Voluptatibus commodi officiis sequi rerum explicabo nostrum.</p>
+
+          <ul>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, illum!</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+          </ul>
+        </div> <!-- end of .job -->
+
+        <div class="job">
+          <h3>Google LLC</h3>
+          <p class="job-date">Dec 2014 - June 2016</p>
+          <p class="job-position">Lead Python Developer</p>
+          <p class="job-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere aliquam nobis quam voluptatem doloribus ab, odio nemo ad pariatur consectetur veniam. Voluptatibus commodi officiis sequi rerum explicabo nostrum.</p>
+
+          <ul>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, illum!</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius fugit veniam ipsa quidem accusamus recusandae asperiores, excepturi voluptas. Eius dolor praesentium, harum aliquid sunt libero.</li>
+          </ul>
+        </div> <!-- end of .job -->
+      </div> <!-- end of jobs -->
+    </section> <!-- end of .work-section -->
+
+
+    <section id="contact" class="contact-section">
+      <h2>Hire Me</h2>
+
+      <div class="contact-form">
+        <form>
+          <label for="full-name">Full name</label>
+          <input type="text" id="full-name" placeholder="John Doe">
+          <label for="phone">Phone</label>
+          <input type="text" id="phone" placeholder="(888) 505-5555">
+          <label for="email">Full name</label>
+          <input type="text" id="email" placeholder="johndoe@icloud.com">
+
+          <button>Send Request</button>
+        </form>
+      </div> <!-- end of .contact-form -->
+    </section> <!-- end of .contact-section -->
   </div>
 </body>
 </html>
