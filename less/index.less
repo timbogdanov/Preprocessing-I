@@ -1,5 +1,5 @@
 // Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -25,7 +25,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -50,10 +50,303 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	// outline: 1px dotted pink;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	background: @primary-dark;
+	font-family: @primary-font;
+	color: @text;
 }
 
+a {
+	text-decoration: none;
+	letter-spacing: .2px;
+}
+
+h2 {
+	font-family: @secondary-font;
+	font-size: 6rem;
+	color: @text-secondary;
+
+	@media (max-width: 500px) {
+		font-size: 4rem;
+	}
+}
+
+/* Font variables */
+
+@primary-font: 'Source Sans Pro', sans-serif;
+@secondary-font: 'Playfair Display', serif;
+
+/* Color variables */
+
+@primary-accent: #DAA520;
+@text: #f9f9f9;
+@text-secondary: #a4a4a4;
+@primary-dark: #1a1a1a;
+@secondary-dark: #1f1f1f;
+
+/* Mixins */
+
+.dark-card() {
+	border-radius: 2px;
+	background: @secondary-dark;
+	color: @text;
+}
+
+.flex-x-center() {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+/* main-wrapper styles */
+
+.main-wrapper {
+	width: 65%;
+	margin: 0 auto;
+
+	@media (max-width: 500px) {
+		width: 80%;
+	}
+}
+
+
+
+/* Navigation styles */
+
+header {
+	margin: 60px 0;
+
+	nav {
+
+		@media (max-width: 500px) {
+			display: flex;
+			flex-direction: column;
+		}
+
+		a {
+			color: @text;
+			font-size: 1.1rem;
+			margin: 0 5px 0 0;
+			padding: 10px 17px;
+			border-radius: 5px;
+			display: inline-block;
+			transition: all .2s ease;
+
+			@media (max-width: 500px) {
+				margin: 0;
+				padding: 15px 25px;
+			}
+
+			&:hover {
+				.dark-card();
+			}
+		} // end of a
+	} // end of nav
+} // end of header
+
+
+
+/* About section styling */
+
+.about-section {
+	margin-top: 100px;
+
+	h1 {
+		font-size: 8rem;
+		font-family: @secondary-font;
+
+		@media (max-width: 500px) {
+			font-size: 6rem;
+		}
+	}
+
+	a, p {
+		font-size: 1.1rem;
+		margin: 30px 20px 0 0;
+		display: inline-block;
+		letter-spacing: .3px;
+
+		@media (max-width: 500px) {
+			display: block;
+		}
+	}
+
+	a {
+		color: @primary-accent;
+	}
+}
+
+
+
+/* Profile section styling */
+
+.profile-section {
+	margin-top: 100px;
+
+	p {
+		margin: 40px 0 0 0;
+		font-size: 1.6rem;
+		line-height: 1.5;
+	}
+
+	.hire-me {
+		display: inline-block;
+		position: relative;
+		padding: 10px 25px;
+		margin: 30px 0 0 0;
+		font-size: 1.4rem;
+		color: @text;
+		font-family: @primary-font;
+		z-index: 1;
+		transition: all .2s ease;
+
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+			width: 100%;
+			height: 20px;
+			border-radius: 1px;
+			background: @primary-accent;
+			transition: all .1s ease;
+		}
+
+		&:hover::before {
+			height: 42px;
+		}
+
+		&:hover {
+			color: #725711;
+		}
+	} // end of .hire-me
+} // end of .profile-section
+
+
+
+/* Skills section styling */
+
+.skills-section {
+	margin-top: 100px;
+
+	.skills {
+		margin-top: 50px;
+		.flex-x-center();
+
+		@media (max-width: 500px) {
+			flex-direction: column;
+		}
+
+		.skill {
+			width: 21%;
+
+			@media (max-width: 500px) {
+				width: 100%;
+				margin-bottom: 10%;
+			}
+
+			h3 {
+				font-size: 1.6rem;
+				margin: 0 0 20px 0;
+				font-family: @secondary-font;
+				line-height: 1.3;
+				color: @text-secondary;
+				font-style: italic;
+			}
+
+			p {
+				font-size: 1.4rem;
+				line-height: 1.5;
+				letter-spacing: .4px;
+			}
+		} // end of .skill
+	} // end of .skills
+} // end of .skills-section
+
+
+
+/* Work section styling */
+
+.work-section {
+	margin-top: 100px;
+
+	.jobs {
+		margin-top: 50px;
+		display: flex;
+		flex-direction: column;
+	} // end of .jobs
+
+	.job {
+		margin-bottom: 5%;
+
+		@media (max-width: 500px) {
+			margin-bottom: 10%;
+		}
+
+		h3 {
+			font-size: 1.6rem;
+			font-family: @secondary-font;
+			color: @text-secondary;
+			margin: 0 0 20px 0;
+			font-style: italic;
+		}
+
+		p.job-date {
+			font-size: 1.4rem;
+		}
+
+		p.job-position {
+			margin: 10px 0;
+			font-size: 1.4rem;
+		}
+
+		p.job-desc {
+			margin-top: 30px;
+			font-size: 1.6rem;
+			line-height: 1.5;
+		}
+	} // end pf .job
+} // end of .work-section
+
+
+
+/* Contact section styling */
+
+.contact-section {
+	margin: 100px 0;
+
+	.contact-form {
+		margin-top: 50px;
+
+		form {
+
+			label {
+				font-family: @secondary-font;
+				font-size: 1.6rem;
+			}
+
+			input, button {
+				width: 100%;
+				padding: 20px;
+				margin: 20px 0;
+				background: @secondary-dark;
+				border: none;
+				font-size: 1rem;
+				border-radius: 5px;
+			}
+
+			button {
+				color: @text-secondary;
+				cursor: pointer;
+			}
+		}
+	}
+}

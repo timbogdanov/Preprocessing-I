@@ -5,6 +5,9 @@
   <meta charset="utf-8">
 
   <title>My Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
 
   <link rel="stylesheet" href="css/index.css">
 
@@ -14,6 +17,93 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <div class="main-wrapper">
+
+    <header>
+      <nav>
+        <a href="#professional-summary">Professional Summary</a>
+        <a href="#skills">Skills</a>
+        <a href="#work-history">Work History</a>
+        <a href="#contact">Get in Touch</a>
+      </nav>
+    </header> <!-- end of .main-wrapper -->
+
+    <section class="about-section">
+      <h1>Steve Wozniak</h1>
+      <a href="#">stevewozniak@icloud.com</a>
+      <p>+1 (971) 282-7557</p>
+      <p>San Francisco, California</p>
+    </section> <!-- end of .about-section -->
+
+    <section id="professional-summary" class="profile-section">
+      <h2>Professional <br> Summary</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque architecto excepturi est omnis ratione delectus facilis, ducimus, eum eius, repellat neque rem voluptate nulla. Vel amet dolorem quam facere provident nulla, repudiandae dolorum ex quasi voluptate alias sed ut recusandae repellendus possimus iure dignissimos, qui fuga ratione? Atque laborum voluptatibus hic dolores quas laudantium, incidunt dolore fugiat consequatur.</p>
+      <a class="hire-me" href="#">Hire Me</a>
+    </section> <!-- end of .profile-section -->
+
+    <section id="skills" class="skills-section">
+      <h2>Skills</h2>
+      <div class="skills">
+
+        <div class="skill">
+          <h3>Web Development</h3>
+          <p>HTML, CSS, JavaScript, Node, React, Redux, Python, SQL</p>
+        </div>
+
+        <div class="skill">
+          <h3>Adobe Creative Suite</h3>
+          <p>Photoshop, Illustrator, InDesign, XD, After Effects</p>
+        </div>
+
+        <div class="skill">
+          <h3>Prototyping</h3>
+          <p>Sketch, Figma, InVision, Marvel, Principle, Balsamiq</p>
+        </div>
+
+        <div class="skill">
+          <h3>Languages</h3>
+          <p>Fluent English, Native Russian</p>
+        </div>
+      </div>
+    </section> <!-- end of .skills-section -->
+
+    <section id="work-history" class="work-section">
+      <h2>Work History</h2>
+
+      <div class="jobs">
+        <div class="job">
+          <h3>Apple Inc.</h3>
+          <p class="job-date">Apr 2018 - Present</p>
+          <p class="job-position">Lead Developer</p>
+          <p class="job-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere aliquam nobis quam voluptatem doloribus ab, odio nemo ad pariatur consectetur veniam. Voluptatibus commodi officiis sequi rerum explicabo nostrum.</p>
+        </div> <!-- end of .job -->
+
+        <div class="job">
+          <h3>Google LLC</h3>
+          <p class="job-date">Dec 2014 - June 2016</p>
+          <p class="job-position">Lead Python Developer</p>
+          <p class="job-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere aliquam nobis quam voluptatem doloribus ab, odio nemo ad pariatur consectetur veniam. Voluptatibus commodi officiis sequi rerum explicabo nostrum.</p>
+        </div> <!-- end of .job -->
+      </div> <!-- end of jobs -->
+    </section> <!-- end of .work-section -->
+
+
+    <section id="contact" class="contact-section">
+      <h2>Get in Touch</h2>
+
+      <div class="contact-form">
+        <form>
+          <label for="full-name">Full name</label>
+          <input type="text" id="full-name" placeholder="John Doe">
+          <label for="phone">Phone</label>
+          <input type="text" id="phone" placeholder="(888) 505-5555">
+          <label for="email">Full name</label>
+          <input type="text" id="email" placeholder="johndoe@icloud.com">
+
+          <button>Send Request</button>
+        </form>
+      </div> <!-- end of .contact-form -->
+    </section> <!-- end of .contact-section -->
+  </div>
 </body>
 </html>
